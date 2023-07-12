@@ -3,6 +3,7 @@ package client
 type Login struct {
 	Act string `json:"act"`
 	Pwd string `json:"pwd"`
+	Tok string `json:"memberAccessToken"`
 }
 
 type CustomerLoginResp struct {
@@ -20,6 +21,10 @@ type CustomerLoginResp struct {
 	Token       string `json:"token"`
 }
 
+type GetSvg struct {
+	BrandId string `json:"brandId"`
+}
+
 type Result struct {
 	// success
 	ACT               string            `json:"_ACT"`
@@ -27,7 +32,7 @@ type Result struct {
 	CustomerLoginResp CustomerLoginResp `json:"customerLoginResp"`
 
 	// Save Seats
-	ExpirationTime string `json:"expirationTime"`
+	ExpirationTime int `json:"expirationSec"`
 
 	// booking
 	BookingID    string `json:"bookingId"`
@@ -39,6 +44,10 @@ type Result struct {
 	MealTime     string `json:"mealTime"`
 	PaymentState string `json:"paymentState"`
 	StoreName    string `json:"storeName"`
+
+	// Captcha
+	Code string `json:"code"`
+	Svg  string `json:"svg"`
 
 	// error
 	Msg string `json:"msg"`
@@ -70,7 +79,9 @@ type SaveSeats struct {
 	MealSeq     int    `json:"mealSeq"`
 	MealDate    string `json:"mealDate"`
 	MealTime    string `json:"mealTime"`
-	Zkde        any    `json:"zkde"`
+	Zkde        any    `json:"zked"`
+	SvgCode     string `json:"svgCode"`
+	SvgStr      string `json:"scgVerifyStr"`
 }
 
 type Booking struct {
@@ -93,4 +104,5 @@ type Booking struct {
 	Domain       string `json:"domain"`
 	PathFir      string `json:"pathFir"`
 	PathSec      string `json:"pathSec"`
+	Yuuu         string `json:"yuuu"`
 }

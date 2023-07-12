@@ -17,6 +17,8 @@ type RestaurantConfig struct {
 	MealPeriod  string `json:"mealPeriod"`
 	MealDate    string `json:"mealDate"`
 	MealTime    string `json:"mealTime"`
+	StoreCode   string `json:"storeCode"`
+	BrandId     string `json:"brandId"`
 }
 
 type Config struct {
