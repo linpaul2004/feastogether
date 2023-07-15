@@ -23,8 +23,10 @@ const (
 func GetToken(user config.UserConfig) string {
 
 	payload := Login{
-		Act: user.Account,
-		Pwd: user.Password,
+		Act:         user.Account,
+		Pwd:         user.Password,
+		ICode:       "+886",
+		CountryCOde: "TW",
 	}
 
 	payloadBytes, err := json.Marshal(payload)

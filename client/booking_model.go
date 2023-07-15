@@ -1,9 +1,11 @@
 package client
 
 type Login struct {
-	Act string `json:"act"`
-	Pwd string `json:"pwd"`
-	Tok string `json:"memberAccessToken"`
+	Act         string `json:"act"`
+	Pwd         string `json:"pwd"`
+	Tok         string `json:"memberAccessToken"`
+	ICode       string `json:"iCode"`
+	CountryCOde string `json:"countryCode"`
 }
 
 type CustomerLoginResp struct {
