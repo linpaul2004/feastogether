@@ -137,7 +137,7 @@ func GetSaveSeats(userConfig config.UserConfig, payload config.RestaurantConfig)
 		MealPeriod:  payload.MealPeriod,
 		MealDate:    payload.MealDate,
 		MealTime:    payload.MealTime,
-		MealSeq:     4,
+		MealSeq:     payload.MealSeq,
 		Zkde:        "1j6ul4y94ejru6xk7vu4vu4",
 		SvgCode:     code,
 		SvgStr:      str,
