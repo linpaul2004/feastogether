@@ -191,7 +191,7 @@ func SaveBooking(act string, token string, payload config.RestaurantConfig) bool
 		MealPeriod: payload.MealPeriod,
 		MealDate:   payload.MealDate,
 		MealTime:   payload.MealTime,
-		MealSeq:    4,
+		MealSeq:    payload.MealSeq,
 		Special:    0,
 		ChildSeat:  0,
 		Adult:      payload.PeopleCount,
